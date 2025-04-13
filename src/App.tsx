@@ -1,4 +1,4 @@
-import { BrowserRouter as Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 // import bg1 from '../src/assets/bg1.png'
 import HomePage from './Pages/HomePage'
 import RepoPage from './Pages/RepoPage'
