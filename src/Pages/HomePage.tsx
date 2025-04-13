@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import bg1 from "../assets/bg1.png";
-import logo from "../assets/logo.png";
 import {
   Card,
   CardHeader,
@@ -40,15 +39,13 @@ const HomePage = () => {
 
   return (
     <div
-      className="min-h-screen bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center px-4 py-10 text-white"
+      className="min-h-screen bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center px-4 py-6 text-white"
       style={{ backgroundImage: `url(${bg1})`,
       backgroundAttachment: 'fixed', }}
     >
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-indigo-300 mb-6 text-center drop-shadow-md">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-400 mb-55 text-center drop-shadow-md">
         GitHub Profile Analyzer
       </h1>
-
-      <img src={logo} alt="logo" className="w-24 h-24 mb-6 rounded-full shadow-lg" />
 
       <div className="w-full max-w-sm space-y-4">
         <Input
@@ -56,7 +53,7 @@ const HomePage = () => {
           placeholder="Enter GitHub username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          className="w-full bg-black/30 text-white placeholder-purple-300 border-2 border-purple-500 focus:ring-4 focus:ring-purple-700 backdrop-blur-md"
+          className="w-full bg-black/30 text-white placeholder-purple-300 border-2 border-white focus:ring-4 focus:ring-fuchsia-600 backdrop-blur-md"
         />
 
         <Button
@@ -74,11 +71,13 @@ const HomePage = () => {
         <>
           <Card className="mt-10 w-full max-w-md bg-black/40 text-white border border-purple-600 rounded-xl shadow-lg backdrop-blur-md">
             <CardHeader className="flex items-center gap-4 p-5">
+            <a href={userData.html_url} target="_blank">
               <img
                 src={userData.avatar_url}
                 alt={userData.login}
-                className="w-16 h-16 rounded-full border-2 border-purple-500 hover:scale-105 transition"
+                className="w-16 h-16 rounded-full border-2 border-purple-500 hover:scale-115 transition"
               />
+              </a>
               <div>
                 <CardTitle className="text-lg">{userData.name || userData.login}</CardTitle>
                 <CardDescription className="text-purple-300">@{userData.login}</CardDescription>
