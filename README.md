@@ -2,8 +2,6 @@
 
 A modern and responsive web app to analyze any GitHub profile — check profile info, explore repositories, and visualize commit activity in beautiful charts.
 
-![GitHub Profile Analyzer Preview](./screenshot.png)
-
 ---
 
 ## 🌟 Features
